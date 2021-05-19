@@ -1,12 +1,10 @@
 import React from 'react';
-import { Icon, Layout, PrimaryButton } from './src/components';
+import { AddRemoveItem, Badge, Icon, Layout, PrimaryButton, TextQuantity } from './src/components';
 import { styleAddToCart, styleIcon, styleLayout, stylePrimaryButton } from './src/library/styles';
 
 
 const App = () => {
   const onPress = () => alert('pressed!')
-
-  const iconItem = <Icon icon={require('./src/assets/icons/arrow-right.png')} style={styleIcon.iconSmall} />
   
   return (
     <Layout style={styleLayout.container}>
@@ -14,7 +12,10 @@ const App = () => {
         <PrimaryButton text="Add to cart" onPress={onPress} style={styleAddToCart} borderButton />
       </Layout>
       <PrimaryButton text="Add to cart" onPress={onPress} style={stylePrimaryButton} />
-      <PrimaryButton text="Let's shop" icon={iconItem} onPress={onPress} style={stylePrimaryButton} />
+      <PrimaryButton text="Let's shop" onPress={onPress} style={stylePrimaryButton} icon />
+      <Badge quant={4} measure={'p'} />
+      <TextQuantity quant={2} measure={'kg'} style={{quant: {color: 'gray'}, text: {color: 'gray', marginTop: 10}}} /> 
+      <AddRemoveItem />
     </Layout>
   );
 };
