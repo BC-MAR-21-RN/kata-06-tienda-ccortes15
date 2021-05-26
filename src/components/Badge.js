@@ -1,12 +1,15 @@
 import React from 'react';
-import {View} from 'react-native';
-import {TextQuantity} from '.';
+import {Text, View} from 'react-native';
 import {styleBadge} from '../library/styles';
 
 const Badge = ({quant, measure}) => {
   return (
     <View style={styleBadge.container}>
-      <TextQuantity quant={quant} measure={measure} style={styleBadge} />
+      <Text style={styleBadge.quant}>
+        {quant}
+        {measure === 'p' && '/'}
+      </Text>
+      <Text style={styleBadge.text}>{measure}</Text>
     </View>
   );
 };

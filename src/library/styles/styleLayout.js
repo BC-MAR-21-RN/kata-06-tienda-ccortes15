@@ -12,4 +12,10 @@ export const style = StyleSheet.create({
   itemContainer: {
     padding: 15,
   },
+  listItems: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    flexWrap: 'wrap',
+    paddingHorizontal: 5,
+  },
 });

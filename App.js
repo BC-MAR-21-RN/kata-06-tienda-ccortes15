@@ -1,22 +1,76 @@
-import React from 'react';
-import { AddRemoveItem, Badge, Icon, Layout, PrimaryButton, TextQuantity } from './src/components';
-import { styleAddToCart, styleIcon, styleLayout, stylePrimaryButton } from './src/library/styles';
-
+import React, {useState} from 'react';
+import {View} from 'react-native';
+import {
+  AddRemoveItem,
+  CollapseItem,
+  InputContainer,
+  Layout,
+  PrimaryButton,
+  ProductItem,
+} from './src/components';
+import {styleLayout, stylePrimaryButton} from './src/library/styles';
 
 const App = () => {
-  const onPress = () => alert('pressed!')
-  
+  const [value, setValue] = useState('');
+  const data = {
+    order: 2341,
+    productList: [
+      {
+        name: 'brocoli',
+        quant: 2,
+        measure: 'Kg',
+        price: 3.14,
+      },
+      {
+        name: 'apple',
+        quant: 2,
+        measure: 'p',
+        price: 4.0,
+      },
+      {
+        name: 'kale',
+        quant: 300,
+        measure: 'g',
+        price: 2.5,
+      },
+    ],
+  };
+
   return (
-    <Layout style={styleLayout.container}>
+    <View style={styleLayout.container}>
+      <CollapseItem data={data} />
       <Layout style={styleLayout.itemContainer}>
-        <PrimaryButton text="Add to cart" onPress={onPress} style={styleAddToCart} borderButton />
+        <InputContainer
+          icon={require('./src/assets/icons/arrow-right.png')}
+          value={value}
+          onChangeText={text => setValue(text)}
+          placeholder={'Fullname'}
+        />
       </Layout>
-      <PrimaryButton text="Add to cart" onPress={onPress} style={stylePrimaryButton} />
-      <PrimaryButton text="Let's shop" onPress={onPress} style={stylePrimaryButton} icon />
-      <Badge quant={4} measure={'p'} />
-      <TextQuantity quant={2} measure={'kg'} style={{quant: {color: 'gray'}, text: {color: 'gray', marginTop: 10}}} /> 
-      <AddRemoveItem />
-    </Layout>
+      <Layout style={styleLayout.itemContainer}>
+        <InputContainer
+          icon={require('./src/assets/icons/check.png')}
+          value={value}
+          onChangeText={text => setValue(text)}
+          secureTextEntry
+          placeholder={'Password'}
+        />
+      </Layout>
+      <Layout style={styleLayout.itemContainer}>
+        <ProductItem
+          image={require('./img/cover.jpg')}
+          product={data.productList[0]}
+        />
+      </Layout>
+      <Layout style={styleLayout.itemContainer}>
+        <AddRemoveItem />
+      </Layout>
+      <PrimaryButton
+        text={'Add to cart'}
+        styleButton={stylePrimaryButton.button}
+        styleText={stylePrimaryButton.text}
+      />
+    </View>
   );
 };
 

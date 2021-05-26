@@ -5,6 +5,7 @@ export const style = StyleSheet.create({
     width: 20,
     height: 20,
     marginRight: 10,
+    tintColor: 'white',
   },
   iconMid: {
     width: 30,

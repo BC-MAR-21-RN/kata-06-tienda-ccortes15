@@ -2,23 +2,18 @@ import {StyleSheet} from 'react-native';
 
 export const style = StyleSheet.create({
   container: {
-    backgroundColor: '#769E20',
-    width: 40,
-    height: 40,
     flexDirection: 'row',
-    justifyContent: 'center',
-    borderRadius: 20,
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    position: 'absolute',
-    alignSelf: 'flex-end',
+    marginHorizontal: 20,
   },
   quant: {
     fontSize: 18,
-    color: 'white',
+    color: '#7C7D87',
   },
   text: {
-    fontSize: 12,
-    color: 'white',
+    fontSize: 14,
+    color: '#7C7D87',
     marginTop: 10,
   },
 });
