@@ -75,3 +75,5 @@ En la carpeta [img](/img) se encuentra el diseño solicitado en formato PNG.
 ## Recursos
 [Para apoyo de tus actividades utiliza esta lista de recursos recomendados](https://github.com/bright-coders/commons/tree/master/topics/resources-react-native)
   
+## CodeClimate
+[![Maintainability](https://api.codeclimate.com/v1/badges/7c2deed71bada773d2c9/maintainability)](https://codeclimate.com/github/BC-MAR-21-RN/kata-06-tienda-ccortes15/maintainability)
