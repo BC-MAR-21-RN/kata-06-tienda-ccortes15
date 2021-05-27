@@ -10,8 +10,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "accordion-collapse-react-native": "^1.0.1",
     "react": "17.0.1",
-    "react-native": "0.64.1"
+    "react-native": "0.64.1",
+    "react-native-cardview": "^2.0.5",
+    "react-native-shadow": "^1.2.2",
+    "react-native-svg": "^5.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
