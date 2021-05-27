@@ -1,5 +1,4 @@
 import PrimaryButton from './PrimaryButton';
-import Layout from './Layout';
 import Icon from './Icon';
 import Badge from './Badge';
 import AddRemoveItem from './AddRemoveItem';
@@ -12,7 +11,6 @@ import InputContainer from './InputContainer';
 
 export {
   PrimaryButton,
-  Layout,
   Icon,
   Badge,
   AddRemoveItem,

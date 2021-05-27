@@ -8,7 +8,6 @@ import {style as styleItemList} from './styleItemList';
 import {style as styleLayout} from './styleLayout';
 import {style as stylePrimaryButton} from './stylePrimaryButton';
 import {style as styleProductItem} from './styleProductItem';
-import {style as styleTextQuantity} from './styleTextQuantity';
 
 export {
   styleLayout,
@@ -17,7 +16,6 @@ export {
   styleBadge,
   styleAddRemove,
   styleProductItem,
-  styleTextQuantity,
   styleImageContainer,
   styleItemList,
   styleCollapse,

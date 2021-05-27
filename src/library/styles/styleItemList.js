@@ -4,8 +4,6 @@ export const style = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    width: Dimensions.get('screen').width,
-    flex: 1,
   },
   flex: {
     flex: 1,

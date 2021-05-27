@@ -1,14 +1,15 @@
-import React, {useState} from 'react';
-import {View} from 'react-native';
+import React, { useState } from 'react';
+import { View } from 'react-native';
 import {
   AddRemoveItem,
   CollapseItem,
   InputContainer,
+  ItemList,
   Layout,
   PrimaryButton,
   ProductItem,
 } from './src/components';
-import {styleLayout, stylePrimaryButton} from './src/library/styles';
+import { styleLayout, stylePrimaryButton } from './src/library/styles';
 
 const App = () => {
   const [value, setValue] = useState('');
@@ -39,15 +40,7 @@ const App = () => {
   return (
     <View style={styleLayout.container}>
       <CollapseItem data={data} />
-      <Layout style={styleLayout.itemContainer}>
-        <InputContainer
-          icon={require('./src/assets/icons/arrow-right.png')}
-          value={value}
-          onChangeText={text => setValue(text)}
-          placeholder={'Fullname'}
-        />
-      </Layout>
-      <Layout style={styleLayout.itemContainer}>
+      <View style={styleLayout.itemContainer}>
         <InputContainer
           icon={require('./src/assets/icons/check.png')}
           value={value}
@@ -55,21 +48,21 @@ const App = () => {
           secureTextEntry
           placeholder={'Password'}
         />
-      </Layout>
-      <Layout style={styleLayout.itemContainer}>
+      </View>
+      <View style={styleLayout.itemContainer}>
         <ProductItem
           image={require('./img/cover.jpg')}
           product={data.productList[0]}
         />
-      </Layout>
-      <Layout style={styleLayout.itemContainer}>
-        <AddRemoveItem />
-      </Layout>
+      </View>
       <PrimaryButton
         text={'Add to cart'}
         styleButton={stylePrimaryButton.button}
         styleText={stylePrimaryButton.text}
       />
+      <ItemList 
+        image={require('./img/cover.jpg')}
+        product={data.productList[0]} />
     </View>
   );
 };
