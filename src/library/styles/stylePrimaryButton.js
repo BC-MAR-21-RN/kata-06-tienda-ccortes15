@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import { colors } from '../constants/colors';
 
 export const style = StyleSheet.create({
   container: {
@@ -10,12 +11,12 @@ export const style = StyleSheet.create({
     paddingVertical: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#32B3A5',
+    backgroundColor: colors.green,
   },
   text: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: 'white',
+    color: colors.white,
   },
   buttonAddTo: {
     padding: 5,
@@ -23,9 +24,9 @@ export const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 2,
-    borderColor: '#7C7D87',
+    borderColor: colors.gray,
     borderRadius: 8,
-    color: '#7C7D87',
+    color: colors.gray,
   },
   textAddTo: {
     fontSize: 14,
@@ -36,11 +37,11 @@ export const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 2,
-    borderColor: 'white',
+    borderColor: colors.white,
     borderRadius: 8,
   },
   textCheck: {
     fontSize: 14,
-    color: 'white',
+    color: colors.white,
   },
 });

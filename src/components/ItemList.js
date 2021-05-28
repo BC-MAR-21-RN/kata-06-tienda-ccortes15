@@ -2,6 +2,7 @@ import React from 'react';
 import {Image, Text, View} from 'react-native';
 import CardView from 'react-native-cardview';
 import {AddRemoveItem, Icon} from '.';
+import { trash } from '../library/constants/icons';
 import {styleIcon, styleItemList} from '../library/styles';
 
 const ItemList = ({image, product}) => {
@@ -15,7 +16,7 @@ const ItemList = ({image, product}) => {
           <View style={styleItemList.viewTop}>
             <Text style={styleItemList.nameProduct}>{product.name}</Text>
             <Icon
-              icon={require('../assets/icons/trash.png')}
+              icon={trash}
               style={{...styleIcon.iconMid, ...styleItemList.icon}}
             />
           </View>

@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import { colors } from '../constants/colors';
 
 export const style = StyleSheet.create({
   header: {
@@ -9,12 +10,12 @@ export const style = StyleSheet.create({
   },
   textHeader: {
     fontSize: 24,
-    color: '#494E52',
+    color: colors.dark,
   },
   iconCollapse: {
     height: 30,
     width: 30,
-    tintColor: 'gray',
+    tintColor: colors.gray,
   },
   body: {
     paddingHorizontal: 20,
@@ -38,11 +39,11 @@ export const style = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    color: '#494E52',
+    color: colors.dark,
   },
   textGray: {
     fontSize: 20,
-    color: '#959EA6',
+    color: colors.lightGray,
   },
   viewDown: {
     marginVertical: 20,
@@ -51,7 +52,7 @@ export const style = StyleSheet.create({
     flexDirection: 'row',
   },
   iconContainer: {
-    backgroundColor: '#32B3A5',
+    backgroundColor: colors.green,
     width: 30,
     height: 30,
     borderRadius: 15,
@@ -62,7 +63,7 @@ export const style = StyleSheet.create({
   iconRounded: {
     height: 15,
     width: 15,
-    tintColor: 'white',
+    tintColor: colors.white,
   },
   shippedContainer: {
     flex: 1,
@@ -71,6 +72,6 @@ export const style = StyleSheet.create({
   },
   shipped: {
     fontSize: 20,
-    color: '#32B3A5',
+    color: colors.green,
   },
 });

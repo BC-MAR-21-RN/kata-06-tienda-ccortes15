@@ -1,8 +1,9 @@
 import {StyleSheet} from 'react-native';
+import { colors } from '../constants/colors';
 
 export const style = StyleSheet.create({
   container: {
-    backgroundColor: '#769E20',
+    backgroundColor: colors.greenYellow,
     width: 40,
     height: 40,
     flexDirection: 'row',
@@ -14,11 +15,11 @@ export const style = StyleSheet.create({
   },
   quant: {
     fontSize: 18,
-    color: 'white',
+    color: colors.white,
   },
   text: {
     fontSize: 12,
-    color: 'white',
+    color: colors.white,
     marginTop: 10,
   },
 });

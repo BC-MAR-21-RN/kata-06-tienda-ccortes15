@@ -1,6 +1,9 @@
 import {style as styleAddRemove} from './styleAddRemoveItem';
 import {style as styleBadge} from './styleBadge';
 import {style as styleCollapse} from './styleCollapse';
+import {style as styleDetails } from './styleDetails';
+import {style as styleHeaderIcon} from './styleHeaderIcon';
+import {style as styleHome} from './styleHome';
 import {style as styleIcon} from './styleIcon';
 import {style as styleImageContainer} from './styleImageContainer';
 import {style as styleInput} from './styleInput';
@@ -20,4 +23,7 @@ export {
   styleItemList,
   styleCollapse,
   styleInput,
+  styleHome,
+  styleHeaderIcon,
+  styleDetails
 };
