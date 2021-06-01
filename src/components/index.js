@@ -9,6 +9,7 @@ import CollapseItem from './CollapseItem';
 import TextContainer from './TextContainer';
 import InputContainer from './InputContainer';
 import IconButton from './IconButton';
+import HeaderComponent from './HeaderComponent';
 
 export {
   PrimaryButton,
@@ -21,5 +22,6 @@ export {
   CollapseItem,
   TextContainer,
   InputContainer,
-  IconButton
+  IconButton,
+  HeaderComponent
 };

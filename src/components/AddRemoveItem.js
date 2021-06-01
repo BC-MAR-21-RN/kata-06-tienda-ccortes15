@@ -5,7 +5,7 @@ import { styleAddRemove, styleIcon } from '../library/styles';
 import { minus, plus } from '../library/constants/icons'
 import { colors } from '../library/constants/colors';
 
-const AddRemoveItem = ({measure}) => {
+const AddRemoveItem = ({quant,measure}) => {
   const onPress = () => alert('pressed!');
 
   return (
@@ -17,7 +17,7 @@ const AddRemoveItem = ({measure}) => {
         styleIcon={styleIcon.iconMid}
         underlay={colors.white} />
       <View style={styleAddRemove.view}>
-        <Text style={styleAddRemove.textValue}>1</Text>
+        <Text style={styleAddRemove.textValue}>{quant}</Text>
         <Text style={styleAddRemove.text}>{measure}</Text>
       </View>
       <IconButton

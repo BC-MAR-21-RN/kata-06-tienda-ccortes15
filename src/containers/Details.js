@@ -1,10 +1,10 @@
 import React from 'react';
-import { ScrollView, StatusBar, Text, View } from 'react-native';
-import { AddRemoveItem, ImageContainer, PrimaryButton } from '../components';
+import { Button, ScrollView, StatusBar, Text, View } from 'react-native';
+import { AddRemoveItem, HeaderComponent, ImageContainer, PrimaryButton } from '../components';
 import { colors } from '../library/constants/colors';
 import { styleDetails, styleLayout, stylePrimaryButton } from '../library/styles';
 
-const Details = () => {
+const Details = ({navigation}) => {
     const product = {
         image: require('../../img/cover.jpg'),
         name: 'Cabbage',
@@ -15,7 +15,7 @@ const Details = () => {
 
     return (
         <ScrollView style={styleLayout.container}>
-            <StatusBar barStyle="dark-content" backgroundColor={colors.white} />
+            <HeaderComponent title="Details" />
             <View style={styleLayout.itemContainer}>
                 <ImageContainer image={product.image} />
                 <Text style={styleDetails.name}>{product.name}</Text>

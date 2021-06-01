@@ -7,6 +7,7 @@ const minus = require('../../assets/icons/minus.png');
 const plus = require('../../assets/icons/plus.png');
 const cart = require('../../assets/icons/shopping-cart.png');
 const trash = require('../../assets/icons/trash.png');
+const arrowLeft = require('../../assets/icons/arrow-left.png')
 
 export {
     arrowRigt,
@@ -17,5 +18,6 @@ export {
     minus,
     plus,
     cart,
-    trash
+    trash,
+    arrowLeft
 }

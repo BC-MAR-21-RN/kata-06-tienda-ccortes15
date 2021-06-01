@@ -1,10 +1,11 @@
-import React from 'react'
-import { Button, StatusBar, View } from 'react-native';
-import { HeaderComponent, ProductItem } from '../components';
-import { colors } from '../library/constants/colors';
-import { styleHome } from '../library/styles';
+import React from 'react';
+import { ScrollView, Text, View } from 'react-native';
+import { ItemList, PrimaryButton } from '../components';
+import { styleMyOrder, stylePrimaryButton } from '../library/styles';
+import HeaderComponent from '../components/HeaderComponent';
+import CardView from 'react-native-cardview';
 
-const Home = ({ navigation }) => {
+const MyOrder = () => {
     const data = {
         order: 2341,
         productList: [
@@ -52,19 +53,28 @@ const Home = ({ navigation }) => {
     };
 
     return (
-        <View>
-            <HeaderComponent title="Home" />
-            <Button title="details" onPress={() => (navigation.navigate('Detail'))} />
-            <Button title="MyOrders" onPress={() => navigation.navigate('MyOrders')} />
-            <Button title="YouOrders" onPress={() => navigation.navigate('YourOrders')} />
-            <Button title="Orders" onPress={() => navigation.navigate('OrderScreen')} />
-            <View style={styleHome.container}>
+        <ScrollView>
+            <HeaderComponent title="My Order" />
+            <View style={styleMyOrder.container}>
+                <View style={styleMyOrder.viewTop}>
+                    <Text style={styleMyOrder.text}>Sub Total =</Text>
+                    <Text style={styleMyOrder.price}>132$</Text>
+                </View>
+                <PrimaryButton
+                    text="Check Out Now"
+                    styleButton={stylePrimaryButton.buttonCheck}
+                    styleText={stylePrimaryButton.textCheck}
+                />
+            </View>
+            <View style={styleMyOrder.viewDown}>
                 {data.productList.map((item) => (
-                    <ProductItem key={item.id} product={item} />
+                    <View key={item.id} style={{marginVertical: 10}}>
+                        <ItemList image={item.image} product={item} />
+                    </View>
                 ))}
             </View>
-        </View>
+        </ScrollView>
     )
 }
 
-export default Home;
+export default MyOrder;
