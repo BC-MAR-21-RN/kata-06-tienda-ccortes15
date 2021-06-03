@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, TouchableHighlight, View} from 'react-native';
 import {Icon} from '.';
-import { arrowRigt } from '../library/constants/icons';
+import {arrowRigt} from '../library/constants/icons';
 import {styleIcon, stylePrimaryButton} from '../library/styles';
 
 const PrimaryButton = ({
@@ -15,7 +15,7 @@ const PrimaryButton = ({
   const iconItem = (
     <Icon
       icon={arrowRigt}
-      style={styleIcon.iconSmall}
+      style={[styleIcon.iconMid, stylePrimaryButton.icon]}
     />
   );
 

@@ -1,7 +1,7 @@
 import {style as styleAddRemove} from './components/styleAddRemoveItem';
 import {style as styleBadge} from './components/styleBadge';
 import {style as styleCollapse} from './components/styleCollapse';
-import {style as styleDetails } from './containers/styleDetails';
+import {style as styleDetails} from './containers/styleDetails';
 import {style as styleHeaderIcon} from './components/styleHeaderIcon';
 import {style as styleHome} from './containers/styleHome';
 import {style as styleIcon} from './components/styleIcon';
@@ -9,12 +9,15 @@ import {style as styleImageContainer} from './components/styleImageContainer';
 import {style as styleInput} from './components/styleInput';
 import {style as styleItemList} from './components/styleItemList';
 import {style as styleLayout} from './components/styleLayout';
-import {style as styleMyOrder } from './containers/styleMyOrder';
+import {style as styleMyOrder} from './containers/styleMyOrder';
 import {style as stylePrimaryButton} from './components/stylePrimaryButton';
 import {style as styleProductItem} from './components/styleProductItem';
 import {style as styleHeader} from './components/styleHeader';
 import {style as styleYourOrder} from './containers/styleYourOrder';
-import {style as styleOrderComplete } from './containers/styleOrderComplete';
+import {style as styleOrderComplete} from './containers/styleOrderComplete';
+import {style as styleCreateAccount} from './containers/styleCreateAccount';
+import {style as styleSignIn} from './containers/styleSignIn';
+import {style as styleBackground} from './components/styleBackground';
 
 export {
   styleLayout,
@@ -33,5 +36,8 @@ export {
   styleMyOrder,
   styleHeader,
   styleYourOrder,
-  styleOrderComplete
+  styleOrderComplete,
+  styleCreateAccount,
+  styleSignIn,
+  styleBackground,
 };

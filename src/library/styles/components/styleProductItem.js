@@ -1,8 +1,9 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../../constants/colors';
 
 export const style = StyleSheet.create({
   card: {
-    width: '30%',
+    width: '27%',
     marginTop: 15,
   },
   item: {
@@ -23,9 +24,13 @@ export const style = StyleSheet.create({
     paddingVertical: 10,
   },
   productName: {
-    fontSize: 18,
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: colors.gray,
   },
   productPrice: {
-    fontSize: 14,
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: colors.lightGray,
   },
 });

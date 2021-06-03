@@ -64,10 +64,7 @@ const CollapseItem = ({data}) => {
               <View style={styleCollapse.rowDirection}>
                 <View style={styleCollapse.shippedContainer}>
                   <View style={styleCollapse.iconContainer}>
-                    <Icon
-                      icon={check}
-                      style={styleCollapse.iconRounded}
-                    />
+                    <Icon icon={check} style={styleCollapse.iconRounded} />
                   </View>
                   <Text style={styleCollapse.shipped}>Shipped</Text>
                 </View>

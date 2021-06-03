@@ -13,7 +13,10 @@ const ProductItem = ({product}) => {
       style={styleProductItem.card}>
       <View style={styleProductItem.item}>
         <View>
-          <ImageBackground source={product.image} style={styleProductItem.coverImage} />
+          <ImageBackground
+            source={product.image}
+            style={styleProductItem.coverImage}
+          />
           <Badge quant={product.quant} measure={product.measure} />
         </View>
         <View style={styleProductItem.viewDetails}>

@@ -1,11 +1,11 @@
-import {Dimensions, StyleSheet} from 'react-native';
-import { colors } from '../../constants/colors';
+import {StyleSheet} from 'react-native';
+import {colors} from '../../constants/colors';
 
 export const style = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 15
+    paddingHorizontal: 15,
   },
   flex: {
     flex: 1,

@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import { colors } from '../../constants/colors';
+import {colors} from '../../constants/colors';
 
 export const style = StyleSheet.create({
   iconSmall: {
@@ -11,6 +11,6 @@ export const style = StyleSheet.create({
   iconMid: {
     width: 30,
     height: 30,
-    tintColor: colors.gray
+    tintColor: colors.gray,
   },
 });

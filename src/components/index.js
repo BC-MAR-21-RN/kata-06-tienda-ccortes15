@@ -10,6 +10,7 @@ import TextContainer from './TextContainer';
 import InputContainer from './InputContainer';
 import IconButton from './IconButton';
 import HeaderComponent from './HeaderComponent';
+import Background from './Background';
 
 export {
   PrimaryButton,
@@ -23,5 +24,6 @@ export {
   TextContainer,
   InputContainer,
   IconButton,
-  HeaderComponent
+  HeaderComponent,
+  Background,
 };

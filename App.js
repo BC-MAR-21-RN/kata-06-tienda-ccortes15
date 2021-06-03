@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Home, Details, MyOrder, YourOrder, OrderComplete } from './src/containers';
+import { Home, Details, MyOrder, YourOrder, OrderComplete, CreateAccount, SignIn } from './src/containers';
 
 const Stack = createStackNavigator();
 
@@ -26,13 +26,21 @@ const App = () => {
     {
       name: 'OrderScreen',
       component: OrderComplete
+    },
+    {
+      name: 'CreateAccountScreen',
+      component: CreateAccount
+    },
+    {
+      name: 'Sign-In',
+      component: SignIn
     }
   ]
 
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {screens.map((screen, index) => (
+        {screens.map((screen) => (
           <Stack.Screen
             key={screen.name}
             name={screen.name}

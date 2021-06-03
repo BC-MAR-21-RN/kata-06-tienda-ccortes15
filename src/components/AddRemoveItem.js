@@ -1,31 +1,29 @@
 import React from 'react';
-import { Text, TouchableHighlight, View } from 'react-native';
-import { Icon, IconButton } from '.';
-import { styleAddRemove, styleIcon } from '../library/styles';
-import { minus, plus } from '../library/constants/icons'
-import { colors } from '../library/constants/colors';
+import {Text, View} from 'react-native';
+import {IconButton} from '.';
+import {styleAddRemove, styleIcon} from '../library/styles';
+import {minus, plus} from '../library/constants/icons';
+import {colors} from '../library/constants/colors';
 
-const AddRemoveItem = ({quant,measure}) => {
-  const onPress = () => alert('pressed!');
-
+const AddRemoveItem = ({quant, measure}) => {
   return (
     <View style={styleAddRemove.container}>
       <IconButton
-        onPress={onPress}
         icon={minus}
         styleButton={styleAddRemove.iconContainer}
         styleIcon={styleIcon.iconMid}
-        underlay={colors.white} />
+        underlay={colors.white}
+      />
       <View style={styleAddRemove.view}>
         <Text style={styleAddRemove.textValue}>{quant}</Text>
         <Text style={styleAddRemove.text}>{measure}</Text>
       </View>
       <IconButton
-        onPress={onPress}
         icon={plus}
         styleButton={styleAddRemove.iconContainer}
         styleIcon={styleIcon.iconMid}
-        underlay={colors.white} />
+        underlay={colors.white}
+      />
     </View>
   );
 };

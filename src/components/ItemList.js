@@ -1,16 +1,13 @@
 import React from 'react';
-import { Image, Text, View } from 'react-native';
+import {Image, Text, View} from 'react-native';
 import CardView from 'react-native-cardview';
-import { AddRemoveItem, Icon } from '.';
-import { trash } from '../library/constants/icons';
-import { styleIcon, styleItemList } from '../library/styles';
+import {AddRemoveItem, Icon} from '.';
+import {trash} from '../library/constants/icons';
+import {styleIcon, styleItemList} from '../library/styles';
 
-const ItemList = ({ image, product }) => {
+const ItemList = ({image, product}) => {
   return (
-    <CardView
-      cardElevation={3}
-      cardMaxElevation={3}
-      cornerRadius={5}>
+    <CardView cardElevation={3} cardMaxElevation={3} cornerRadius={5}>
       <View style={styleItemList.container}>
         <View>
           <Image source={image} style={styleItemList.image} />
@@ -20,7 +17,7 @@ const ItemList = ({ image, product }) => {
             <Text style={styleItemList.nameProduct}>{product.name}</Text>
             <Icon
               icon={trash}
-              style={{ ...styleIcon.iconMid, ...styleItemList.icon }}
+              style={{...styleIcon.iconMid, ...styleItemList.icon}}
             />
           </View>
           <View style={styleItemList.viewMid}>
@@ -35,7 +32,6 @@ const ItemList = ({ image, product }) => {
         </View>
       </View>
     </CardView>
-
   );
 };
 
