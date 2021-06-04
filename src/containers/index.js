@@ -15,5 +15,5 @@ export {
   OrderComplete,
   CreateAccount,
   SignIn,
-  LetsStart
+  LetsStart,
 };

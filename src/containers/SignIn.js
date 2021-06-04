@@ -1,7 +1,6 @@
 import React from 'react';
 import {Text, View, StatusBar} from 'react-native';
 import {Background, InputContainer, PrimaryButton} from '../components';
-import {colors} from '../library/constants/colors';
 import {mail, pass} from '../library/constants/icons';
 import {
   styleCreateAccount,

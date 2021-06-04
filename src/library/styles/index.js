@@ -41,5 +41,5 @@ export {
   styleCreateAccount,
   styleSignIn,
   styleBackground,
-  styleStart
+  styleStart,
 };
