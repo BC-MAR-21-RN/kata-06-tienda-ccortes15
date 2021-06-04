@@ -17,7 +17,7 @@ import {
 const CreateAccount = () => {
   return (
     <Background>
-      <StatusBar barStyle="light-content" backgroundColor={colors.white} />
+      <StatusBar hidden={true} />
       <View style={styleCreateAccount.viewTop}>
         <View>
           <IconButton

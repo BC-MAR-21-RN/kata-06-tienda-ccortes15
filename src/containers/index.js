@@ -5,6 +5,7 @@ import MyOrder from './MyOrder';
 import OrderComplete from './OrderComplete';
 import YourOrder from './YourOrder';
 import SignIn from './SignIn';
+import LetsStart from './LetsStart';
 
 export {
   Home,
@@ -14,4 +15,5 @@ export {
   OrderComplete,
   CreateAccount,
   SignIn,
+  LetsStart
 };

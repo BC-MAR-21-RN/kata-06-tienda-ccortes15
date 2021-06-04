@@ -12,7 +12,7 @@ import {
 const SignIn = () => {
   return (
     <Background>
-      <StatusBar barStyle="light-content" backgroundColor={colors.white} />
+      <StatusBar hidden={true} />
       <View style={styleSignIn.viewTop}>
         <View>
           <Text style={styleCreateAccount.text}>Sign In</Text>

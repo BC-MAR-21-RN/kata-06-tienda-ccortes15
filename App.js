@@ -1,12 +1,16 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Home, Details, MyOrder, YourOrder, OrderComplete, CreateAccount, SignIn } from './src/containers';
+import { Home, Details, MyOrder, YourOrder, OrderComplete, CreateAccount, SignIn, LetsStart } from './src/containers';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   const screens = [
+    {
+      name: 'LetsStart',
+      component: LetsStart
+    },
     {
       name: 'HomeScreen',
       component: Home
@@ -39,7 +43,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="LetsStart" screenOptions={{ headerShown: false }}>
         {screens.map((screen) => (
           <Stack.Screen
             key={screen.name}

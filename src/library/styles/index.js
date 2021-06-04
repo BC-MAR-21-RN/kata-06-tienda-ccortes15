@@ -18,6 +18,7 @@ import {style as styleOrderComplete} from './containers/styleOrderComplete';
 import {style as styleCreateAccount} from './containers/styleCreateAccount';
 import {style as styleSignIn} from './containers/styleSignIn';
 import {style as styleBackground} from './components/styleBackground';
+import {style as styleStart} from './containers/styleStart';
 
 export {
   styleLayout,
@@ -40,4 +41,5 @@ export {
   styleCreateAccount,
   styleSignIn,
   styleBackground,
+  styleStart
 };
