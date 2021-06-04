@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../../constants/colors';
 
 export const style = StyleSheet.create({
   container: {
@@ -12,7 +13,7 @@ export const style = StyleSheet.create({
     height: 30,
     width: 30,
     marginRight: 10,
-    tintColor: '#959EA6',
+    tintColor: colors.lightGray,
   },
   textInput: {
     fontSize: 24,

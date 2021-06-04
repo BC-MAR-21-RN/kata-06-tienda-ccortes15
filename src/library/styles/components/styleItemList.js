@@ -1,9 +1,11 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {colors} from '../../constants/colors';
 
 export const style = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
+    paddingHorizontal: 15,
   },
   flex: {
     flex: 1,
@@ -22,16 +24,16 @@ export const style = StyleSheet.create({
     padding: 10,
   },
   nameProduct: {
-    color: 'gray',
+    color: colors.gray,
     fontSize: 22,
     fontWeight: 'bold',
   },
   text: {
     fontSize: 16,
-    color: 'gray',
+    color: colors.gray,
   },
   icon: {
-    tintColor: 'gray',
+    tintColor: colors.gray,
   },
   image: {
     width: 150,

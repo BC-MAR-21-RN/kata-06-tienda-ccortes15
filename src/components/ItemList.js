@@ -2,11 +2,12 @@ import React from 'react';
 import {Image, Text, View} from 'react-native';
 import CardView from 'react-native-cardview';
 import {AddRemoveItem, Icon} from '.';
+import {trash} from '../library/constants/icons';
 import {styleIcon, styleItemList} from '../library/styles';
 
 const ItemList = ({image, product}) => {
   return (
-    <CardView cardElevation={5} cardMaxElevation={5} cornerRadius={0}>
+    <CardView cardElevation={3} cardMaxElevation={3} cornerRadius={5}>
       <View style={styleItemList.container}>
         <View>
           <Image source={image} style={styleItemList.image} />
@@ -15,7 +16,7 @@ const ItemList = ({image, product}) => {
           <View style={styleItemList.viewTop}>
             <Text style={styleItemList.nameProduct}>{product.name}</Text>
             <Icon
-              icon={require('../assets/icons/trash.png')}
+              icon={trash}
               style={{...styleIcon.iconMid, ...styleItemList.icon}}
             />
           </View>
@@ -26,7 +27,7 @@ const ItemList = ({image, product}) => {
             <Text style={styleItemList.text}>${product.price}</Text>
           </View>
           <View style={styleItemList.viewDown}>
-            <AddRemoveItem />
+            <AddRemoveItem quant={product.quant} measure={product.measure} />
           </View>
         </View>
       </View>

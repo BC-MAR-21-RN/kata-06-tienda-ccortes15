@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, TouchableHighlight, View} from 'react-native';
 import {Icon} from '.';
+import {arrowRigt} from '../library/constants/icons';
 import {styleIcon, stylePrimaryButton} from '../library/styles';
 
 const PrimaryButton = ({
@@ -13,8 +14,8 @@ const PrimaryButton = ({
 }) => {
   const iconItem = (
     <Icon
-      icon={require('../assets/icons/arrow-right.png')}
-      style={styleIcon.iconSmall}
+      icon={arrowRigt}
+      style={[styleIcon.iconMid, stylePrimaryButton.icon]}
     />
   );
 

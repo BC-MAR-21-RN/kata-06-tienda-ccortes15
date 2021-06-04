@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../../constants/colors';
 
 export const style = StyleSheet.create({
   container: {
@@ -6,14 +7,14 @@ export const style = StyleSheet.create({
     alignItems: 'center',
   },
   iconContainer: {
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     width: 40,
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 2,
     borderRadius: 20,
-    borderColor: '#7C7D87',
+    borderColor: colors.lightGray,
   },
   view: {
     marginHorizontal: 15,
@@ -21,9 +22,11 @@ export const style = StyleSheet.create({
   },
   textValue: {
     fontSize: 18,
+    color: colors.gray,
   },
   text: {
     fontSize: 18,
     marginTop: 5,
+    color: colors.gray,
   },
 });

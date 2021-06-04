@@ -4,7 +4,7 @@ import CardView from 'react-native-cardview';
 import {Badge, PrimaryButton} from '.';
 import {stylePrimaryButton, styleProductItem} from '../library/styles';
 
-const ProductItem = ({image, product}) => {
+const ProductItem = ({product}) => {
   return (
     <CardView
       cardElevation={4}
@@ -13,7 +13,10 @@ const ProductItem = ({image, product}) => {
       style={styleProductItem.card}>
       <View style={styleProductItem.item}>
         <View>
-          <ImageBackground source={image} style={styleProductItem.coverImage} />
+          <ImageBackground
+            source={product.image}
+            style={styleProductItem.coverImage}
+          />
           <Badge quant={product.quant} measure={product.measure} />
         </View>
         <View style={styleProductItem.viewDetails}>

@@ -1,69 +1,58 @@
-import React, { useState } from 'react';
-import { View } from 'react-native';
-import {
-  AddRemoveItem,
-  CollapseItem,
-  InputContainer,
-  ItemList,
-  Layout,
-  PrimaryButton,
-  ProductItem,
-} from './src/components';
-import { styleLayout, stylePrimaryButton } from './src/library/styles';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Home, Details, MyOrder, YourOrder, OrderComplete, CreateAccount, SignIn, LetsStart } from './src/containers';
+
+const Stack = createStackNavigator();
 
 const App = () => {
-  const [value, setValue] = useState('');
-  const data = {
-    order: 2341,
-    productList: [
-      {
-        name: 'brocoli',
-        quant: 2,
-        measure: 'Kg',
-        price: 3.14,
-      },
-      {
-        name: 'apple',
-        quant: 2,
-        measure: 'p',
-        price: 4.0,
-      },
-      {
-        name: 'kale',
-        quant: 300,
-        measure: 'g',
-        price: 2.5,
-      },
-    ],
-  };
+  const screens = [
+    {
+      name: 'LetsStart',
+      component: LetsStart
+    },
+    {
+      name: 'HomeScreen',
+      component: Home
+    },
+    {
+      name: 'Detail',
+      component: Details
+    },
+    {
+      name: 'MyOrders',
+      component: MyOrder
+    },
+    {
+      name: 'YourOrders',
+      component: YourOrder
+    },
+    {
+      name: 'OrderScreen',
+      component: OrderComplete
+    },
+    {
+      name: 'CreateAccountScreen',
+      component: CreateAccount
+    },
+    {
+      name: 'Sign-In',
+      component: SignIn
+    }
+  ]
 
   return (
-    <View style={styleLayout.container}>
-      <CollapseItem data={data} />
-      <View style={styleLayout.itemContainer}>
-        <InputContainer
-          icon={require('./src/assets/icons/check.png')}
-          value={value}
-          onChangeText={text => setValue(text)}
-          secureTextEntry
-          placeholder={'Password'}
-        />
-      </View>
-      <View style={styleLayout.itemContainer}>
-        <ProductItem
-          image={require('./img/cover.jpg')}
-          product={data.productList[0]}
-        />
-      </View>
-      <PrimaryButton
-        text={'Add to cart'}
-        styleButton={stylePrimaryButton.button}
-        styleText={stylePrimaryButton.text}
-      />
-      <ItemList 
-        image={require('./img/cover.jpg')}
-        product={data.productList[0]} />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="LetsStart" screenOptions={{ headerShown: false }}>
+        {screens.map((screen) => (
+          <Stack.Screen
+            key={screen.name}
+            name={screen.name}
+            component={screen.component}
+          />
+        ))}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

@@ -7,15 +7,13 @@ import {
 import {Text, View} from 'react-native';
 import {Icon, TextContainer} from '.';
 import {styleCollapse} from '../library/styles';
+import {check, chevDown, chevUp} from '../library/constants/icons';
 import CardView from 'react-native-cardview';
 
 const CollapseItem = ({data}) => {
   const [expanded, setExpanded] = useState(false);
 
   const onToggle = isExpanded => setExpanded(isExpanded);
-
-  const iconUp = require('../assets/icons/chevron-up.png');
-  const iconDown = require('../assets/icons/chevron-down.png');
 
   return (
     <CardView cardElevation={8} cardMaxElevation={8} cornerRadius={5}>
@@ -24,7 +22,7 @@ const CollapseItem = ({data}) => {
           <View style={styleCollapse.header}>
             <Text style={styleCollapse.textHeader}>Order #{data.order}</Text>
             <Icon
-              icon={expanded ? iconUp : iconDown}
+              icon={expanded ? chevUp : chevDown}
               style={styleCollapse.iconCollapse}
             />
           </View>
@@ -66,10 +64,7 @@ const CollapseItem = ({data}) => {
               <View style={styleCollapse.rowDirection}>
                 <View style={styleCollapse.shippedContainer}>
                   <View style={styleCollapse.iconContainer}>
-                    <Icon
-                      icon={require('../assets/icons/check.png')}
-                      style={styleCollapse.iconRounded}
-                    />
+                    <Icon icon={check} style={styleCollapse.iconRounded} />
                   </View>
                   <Text style={styleCollapse.shipped}>Shipped</Text>
                 </View>
