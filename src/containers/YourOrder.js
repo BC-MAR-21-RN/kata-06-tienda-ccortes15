@@ -101,13 +101,11 @@ const YourOrder = ({navigation}) => {
 
   return (
     <Background>
-      <StatusBar barStyle="dark-content" backgroundColor={colors.white} />
-
+      <StatusBar barStyle="dark-content" backgroundColor={'transparent'} translucent/>
       <View style={styleYourOrder.header}>
         <IconButton
           icon={arrowLeft}
-          onPress={() => navigation.navigate('HomeScreen')}
-          underlay={colors.white}
+          onPress={() => navigation.goBack()}
           styleIcon={styleIcon.iconMid}
         />
         <View style={styleYourOrder.viewTitle}>

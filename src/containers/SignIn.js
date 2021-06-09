@@ -1,17 +1,17 @@
 import React from 'react';
 import {Text, View, StatusBar} from 'react-native';
 import {Background, InputContainer, PrimaryButton} from '../components';
-import {mail, pass} from '../library/constants/icons';
+import {arrowRigt, mail, pass} from '../library/constants/icons';
 import {
   styleCreateAccount,
   stylePrimaryButton,
   styleSignIn,
 } from '../library/styles';
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
   return (
     <Background>
-      <StatusBar hidden={true} />
+      <StatusBar backgroundColor={'transparent'} />
       <View style={styleSignIn.viewTop}>
         <View>
           <Text style={styleCreateAccount.text}>Sign In</Text>
@@ -23,10 +23,11 @@ const SignIn = () => {
         </View>
         <View>
           <PrimaryButton
-            icon
+            icon={arrowRigt}
             text="SIGN IN"
             styleText={stylePrimaryButton.text}
             styleButton={[stylePrimaryButton.button, styleCreateAccount.button]}
+            onPress={() => navigation.jumpTo('Home')}
           />
         </View>
       </View>
@@ -34,6 +35,7 @@ const SignIn = () => {
         <PrimaryButton
           text="CREATE ACCOUNT"
           styleText={stylePrimaryButton.text}
+          onPress={() => navigation.jumpTo('CreateAccount')}
         />
       </View>
     </Background>

@@ -1,11 +1,10 @@
 import React from 'react';
 import {StatusBar, Text, View} from 'react-native';
 import {IconButton} from '.';
-import {colors} from '../library/constants/colors';
 import {cart, menu} from '../library/constants/icons';
 import {styleHeader, styleHeaderIcon} from '../library/styles';
 
-const Header = ({title}) => {
+const Header = ({title, navigation}) => {
   const isDetails = title === 'Details' ? true : false;
 
   const iconComponent = (icon, func) => (
@@ -16,12 +15,9 @@ const Header = ({title}) => {
           ? styleHeaderIcon.grayIcon
           : styleHeaderIcon.whiteIcon
       }
-      underlay={title === 'Details' ? colors.white : colors.green}
       onPress={func}
     />
   );
-
-  const onPress = () => console.log('pressed!');
 
   return (
     <View
@@ -31,13 +27,14 @@ const Header = ({title}) => {
       ]}>
       <StatusBar
         barStyle={isDetails ? 'dark-content' : 'light-content'}
-        backgroundColor={isDetails ? colors.white : colors.green}
+        backgroundColor={'transparent'} 
+        translucent
       />
-      {iconComponent(menu, onPress)}
+      {iconComponent(menu, () => navigation.toggleDrawer() )}
       <Text style={isDetails ? styleHeader.titleGray : styleHeader.titleWhite}>
         {title}
       </Text>
-      {iconComponent(cart, onPress)}
+      {iconComponent(cart, () => navigation.jumpTo('MyOrders'))}
     </View>
   );
 };

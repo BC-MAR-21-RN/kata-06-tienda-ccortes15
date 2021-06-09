@@ -1,10 +1,10 @@
 import React from 'react';
-import {View} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
-import {Background, HeaderComponent, ProductItem} from '../components';
-import {styleHome} from '../library/styles';
+import { View, Button } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { Background, HeaderComponent, ProductItem } from '../components';
+import { styleHome } from '../library/styles';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const data = {
     order: 2341,
     productList: [
@@ -77,19 +77,13 @@ const Home = () => {
 
   return (
     <Background>
-      <HeaderComponent title="Home" />
-      {/* <Button title="details" onPress={() => (navigation.navigate('Detail'))} />
-            <Button title="MyOrders" onPress={() => navigation.navigate('MyOrders')} />
-            <Button title="YouOrders" onPress={() => navigation.navigate('YourOrders')} />
-            <Button title="Orders" onPress={() => navigation.navigate('OrderScreen')} />
-            <Button title="Login" onPress={() => navigation.navigate('CreateAccountScreen')} />
-            <Button title="Sign-In" onPress={() => navigation.navigate('Sign-In')} /> */}
+      <HeaderComponent title="Home" navigation={navigation} />
       <View style={styleHome.container}>
         <ScrollView
           contentContainerStyle={styleHome.scrollContainer}
           showsVerticalScrollIndicator={false}>
           {data.productList.map(item => (
-            <ProductItem key={item.id} product={item} />
+            <ProductItem key={item.id} product={item} goToDetails={() => navigation.jumpTo('Details')} />
           ))}
         </ScrollView>
       </View>

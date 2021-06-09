@@ -4,11 +4,10 @@ import {Background, PrimaryButton} from '../components';
 import {stylePrimaryButton, styleStart} from '../library/styles';
 
 const LetsStart = ({navigation}) => {
-  const goHome = () => navigation.navigate('HomeScreen');
 
   return (
     <Background>
-      <StatusBar hidden={true} />
+      <StatusBar backgroundColor={'transparent'} translucent />
       <View style={styleStart.container}>
         <View style={styleStart.view}>
           <Text style={styleStart.text}>Vegezone</Text>
@@ -20,8 +19,8 @@ const LetsStart = ({navigation}) => {
           </View>
         </View>
         <PrimaryButton
-          onPress={() => goHome()}
-          text="Let's Start"
+          onPress={() => navigation.jumpTo('SignIn')}
+          text="Let's Shop"
           styleButton={stylePrimaryButton.button}
           styleText={stylePrimaryButton.text}
         />

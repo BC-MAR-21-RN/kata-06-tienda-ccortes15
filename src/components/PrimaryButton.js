@@ -1,7 +1,6 @@
 import React from 'react';
 import {Text, TouchableHighlight, View} from 'react-native';
 import {Icon} from '.';
-import {arrowRigt} from '../library/constants/icons';
 import {styleIcon, stylePrimaryButton} from '../library/styles';
 
 const PrimaryButton = ({
@@ -14,7 +13,7 @@ const PrimaryButton = ({
 }) => {
   const iconItem = (
     <Icon
-      icon={arrowRigt}
+      icon={icon}
       style={[styleIcon.iconMid, stylePrimaryButton.icon]}
     />
   );
@@ -24,7 +23,7 @@ const PrimaryButton = ({
       <TouchableHighlight
         style={styleButton}
         activeOpacity={0.6}
-        underlayColor={borderButton ? '#DDDDDD' : '#227A70'}
+        underlayColor='transparent'
         onPress={onPress}>
         <View style={stylePrimaryButton.container}>
           {icon && iconItem}

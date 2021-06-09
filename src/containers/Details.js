@@ -8,7 +8,7 @@ import {
 } from '../components';
 import {styleDetails, styleLayout, stylePrimaryButton} from '../library/styles';
 
-const Details = () => {
+const Details = ({navigation}) => {
   const product = {
     image: require('../../img/cover.jpg'),
     name: 'Cabbage',
@@ -20,7 +20,7 @@ const Details = () => {
 
   return (
     <View style={styleLayout.container}>
-      <HeaderComponent title="Details" />
+      <HeaderComponent title="Details" navigation={navigation} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styleDetails.container}>
           <View style={styleLayout.itemContainer}>
@@ -29,7 +29,7 @@ const Details = () => {
             <Text style={styleDetails.price}>${product.price}</Text>
             <Text style={styleDetails.text}>{product.detail}</Text>
             <View style={styleLayout.itemContainer}>
-              <AddRemoveItem measure={product.measure} />
+              <AddRemoveItem quant={1} measure={product.measure} />
             </View>
           </View>
           <PrimaryButton

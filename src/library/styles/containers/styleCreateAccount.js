@@ -5,6 +5,7 @@ export const style = StyleSheet.create({
   viewTop: {
     minHeight: '85%',
     paddingHorizontal: 30,
+    paddingTop: 15,
     paddingBottom: 30,
     backgroundColor: colors.white,
     borderBottomLeftRadius: 30,

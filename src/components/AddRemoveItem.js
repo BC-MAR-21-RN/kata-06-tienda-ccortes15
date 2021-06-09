@@ -3,7 +3,6 @@ import {Text, View} from 'react-native';
 import {IconButton} from '.';
 import {styleAddRemove, styleIcon} from '../library/styles';
 import {minus, plus} from '../library/constants/icons';
-import {colors} from '../library/constants/colors';
 
 const AddRemoveItem = ({quant, measure}) => {
   return (
@@ -12,7 +11,7 @@ const AddRemoveItem = ({quant, measure}) => {
         icon={minus}
         styleButton={styleAddRemove.iconContainer}
         styleIcon={styleIcon.iconMid}
-        underlay={colors.white}
+        onPress={() => console.log('pressed!')}
       />
       <View style={styleAddRemove.view}>
         <Text style={styleAddRemove.textValue}>{quant}</Text>
@@ -22,7 +21,7 @@ const AddRemoveItem = ({quant, measure}) => {
         icon={plus}
         styleButton={styleAddRemove.iconContainer}
         styleIcon={styleIcon.iconMid}
-        underlay={colors.white}
+        onPress={() => console.log('pressed!')}
       />
     </View>
   );
