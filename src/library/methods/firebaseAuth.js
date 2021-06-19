@@ -4,8 +4,8 @@ const signOut = async navigation => {
   await auth()
     .signOut()
     .then(() => {
-      navigation.jumpTo('Shop')}
-    );
+      navigation.jumpTo('Shop');
+    });
 };
 
 export {signOut};

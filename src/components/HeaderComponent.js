@@ -27,10 +27,10 @@ const Header = ({title, navigation}) => {
       ]}>
       <StatusBar
         barStyle={isDetails ? 'dark-content' : 'light-content'}
-        backgroundColor={'transparent'} 
+        backgroundColor={'transparent'}
         translucent
       />
-      {iconComponent(menu, () => navigation.toggleDrawer() )}
+      {iconComponent(menu, () => navigation.toggleDrawer())}
       <Text style={isDetails ? styleHeader.titleGray : styleHeader.titleWhite}>
         {title}
       </Text>

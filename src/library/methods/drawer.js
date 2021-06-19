@@ -15,7 +15,7 @@ import {
   phone,
   tag,
 } from '../constants/icons';
-import { signOut } from './firebaseAuth';
+import {signOut} from './firebaseAuth';
 
 const drawerItems = navigation => {
   return [

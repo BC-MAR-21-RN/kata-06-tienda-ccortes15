@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Button } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import { Background, HeaderComponent, ProductItem } from '../components';
-import { styleHome } from '../library/styles';
+import {View} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
+import {Background, HeaderComponent, ProductItem} from '../components';
+import {styleHome} from '../library/styles';
 
 const Home = ({navigation}) => {
   const data = {
@@ -83,7 +83,11 @@ const Home = ({navigation}) => {
           contentContainerStyle={styleHome.scrollContainer}
           showsVerticalScrollIndicator={false}>
           {data.productList.map(item => (
-            <ProductItem key={item.id} product={item} goToDetails={() => navigation.jumpTo('Details')} />
+            <ProductItem
+              key={item.id}
+              product={item}
+              goToDetails={() => navigation.jumpTo('Details')}
+            />
           ))}
         </ScrollView>
       </View>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, StatusBar, View, ScrollView} from 'react-native';
+import {Text, StatusBar, View} from 'react-native';
 import {
   Background,
   IconButton,

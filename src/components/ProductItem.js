@@ -1,19 +1,19 @@
 import React from 'react';
-import { ImageBackground, View, Text, TouchableHighlight } from 'react-native';
+import {ImageBackground, View, Text, TouchableHighlight} from 'react-native';
 import CardView from 'react-native-cardview';
-import { Badge, PrimaryButton } from '.';
-import { stylePrimaryButton, styleProductItem } from '../library/styles';
+import {Badge, PrimaryButton} from '.';
+import {stylePrimaryButton, styleProductItem} from '../library/styles';
 
-const ProductItem = ({ product, goToDetails }) => {
+const ProductItem = ({product, goToDetails}) => {
   return (
     <CardView
       cardElevation={4}
       cardMaxElevation={4}
       cornerRadius={5}
       style={styleProductItem.card}>
-      <TouchableHighlight 
+      <TouchableHighlight
         activeOpacity={0.6}
-        underlayColor='transparent'
+        underlayColor="transparent"
         onPress={goToDetails}>
         <View style={styleProductItem.item}>
           <View>
@@ -37,7 +37,6 @@ const ProductItem = ({ product, goToDetails }) => {
           </View>
         </View>
       </TouchableHighlight>
-
     </CardView>
   );
 };

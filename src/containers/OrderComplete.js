@@ -6,7 +6,11 @@ import {styleOrderComplete} from '../library/styles';
 const OrderComplete = () => {
   return (
     <Background>
-      <StatusBar barStyle="light-content" backgroundColor={'transparent'} translucent />
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor={'transparent'}
+        translucent
+      />
       <View style={styleOrderComplete.viewDown}>
         <Text style={styleOrderComplete.text}>Order placed.</Text>
         <Text style={styleOrderComplete.text}>Your order number is</Text>

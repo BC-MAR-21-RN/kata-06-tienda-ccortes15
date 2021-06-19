@@ -12,10 +12,7 @@ const PrimaryButton = ({
   borderButton,
 }) => {
   const iconItem = (
-    <Icon
-      icon={icon}
-      style={[styleIcon.iconMid, stylePrimaryButton.icon]}
-    />
+    <Icon icon={icon} style={[styleIcon.iconMid, stylePrimaryButton.icon]} />
   );
 
   return (
@@ -23,7 +20,7 @@ const PrimaryButton = ({
       <TouchableHighlight
         style={styleButton}
         activeOpacity={0.6}
-        underlayColor='transparent'
+        underlayColor="transparent"
         onPress={onPress}>
         <View style={stylePrimaryButton.container}>
           {icon && iconItem}

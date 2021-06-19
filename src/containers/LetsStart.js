@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import {Image, StatusBar, Text, View} from 'react-native';
 import {Background, PrimaryButton} from '../components';
 import {stylePrimaryButton, styleStart} from '../library/styles';

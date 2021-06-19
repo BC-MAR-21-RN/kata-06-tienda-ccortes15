@@ -6,7 +6,7 @@ const IconButton = ({styleButton, styleIcon, icon, onPress}) => {
   return (
     <TouchableHighlight
       style={styleButton}
-      underlayColor='transparent'
+      underlayColor="transparent"
       onPress={onPress}>
       <Icon icon={icon} style={styleIcon} />
     </TouchableHighlight>
