@@ -11,6 +11,8 @@ import InputContainer from './InputContainer';
 import IconButton from './IconButton';
 import HeaderComponent from './HeaderComponent';
 import Background from './Background';
+import DrawerContent from './DrawerContent';
+import ModalComponent from './Modal';
 
 export {
   PrimaryButton,
@@ -26,4 +28,6 @@ export {
   IconButton,
   HeaderComponent,
   Background,
+  DrawerContent,
+  ModalComponent,
 };

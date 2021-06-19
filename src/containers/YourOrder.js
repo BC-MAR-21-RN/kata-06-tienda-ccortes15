@@ -1,7 +1,6 @@
 import React from 'react';
 import {ScrollView, StatusBar, Text, View} from 'react-native';
 import {Background, CollapseItem, IconButton} from '../components';
-import {colors} from '../library/constants/colors';
 import {arrowLeft} from '../library/constants/icons';
 import {styleIcon, styleYourOrder} from '../library/styles';
 
@@ -101,13 +100,15 @@ const YourOrder = ({navigation}) => {
 
   return (
     <Background>
-      <StatusBar barStyle="dark-content" backgroundColor={colors.white} />
-
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor={'transparent'}
+        translucent
+      />
       <View style={styleYourOrder.header}>
         <IconButton
           icon={arrowLeft}
-          onPress={() => navigation.navigate('HomeScreen')}
-          underlay={colors.white}
+          onPress={() => navigation.goBack()}
           styleIcon={styleIcon.iconMid}
         />
         <View style={styleYourOrder.viewTitle}>

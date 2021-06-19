@@ -4,7 +4,7 @@ import {Background, ItemList, PrimaryButton} from '../components';
 import {styleMyOrder, stylePrimaryButton} from '../library/styles';
 import HeaderComponent from '../components/HeaderComponent';
 
-const MyOrder = () => {
+const MyOrder = ({navigation}) => {
   const data = {
     order: 2341,
     productList: [
@@ -53,7 +53,7 @@ const MyOrder = () => {
 
   return (
     <Background>
-      <HeaderComponent title="My Order" />
+      <HeaderComponent title="My Order" navigation={navigation} />
       <View style={styleMyOrder.container}>
         <View style={styleMyOrder.viewTop}>
           <Text style={styleMyOrder.text}>Sub Total =</Text>

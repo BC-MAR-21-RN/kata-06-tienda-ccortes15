@@ -12,8 +12,18 @@ const xIcon = require('../../assets/icons/x.png');
 const user = require('../../assets/icons/user.png');
 const mail = require('../../assets/icons/mail.png');
 const pass = require('../../assets/icons/lock.png');
+const home = require('../../assets/icons/home.png');
+const bell = require('../../assets/icons/bell.png');
+const tag = require('../../assets/icons/tag.png');
+const phone = require('../../assets/icons/phone.png');
+const message = require('../../assets/icons/message-square.png');
+const logOut = require('../../assets/icons/log-out.png');
+const archive = require('../../assets/icons/archive.png');
+const loading = require('../../assets/icons/loader.png');
+const xOctagon = require('../../assets/icons/x-octagon.png');
 
 export {
+  archive,
   arrowRigt,
   check,
   chevDown,
@@ -28,4 +38,12 @@ export {
   user,
   mail,
   pass,
+  home,
+  bell,
+  tag,
+  phone,
+  message,
+  logOut,
+  loading,
+  xOctagon,
 };
