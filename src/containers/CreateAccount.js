@@ -1,20 +1,36 @@
 import React from 'react';
-import {Text, StatusBar, View} from 'react-native';
+import {Text, StatusBar, View, ScrollView} from 'react-native';
 import {
   Background,
   IconButton,
   InputContainer,
+  ModalComponent,
   PrimaryButton,
 } from '../components';
-import {colors} from '../library/constants/colors';
 import {arrowRigt, mail, pass, user, xIcon} from '../library/constants/icons';
 import {
   styleCreateAccount,
   styleIcon,
   stylePrimaryButton,
 } from '../library/styles';
+import {useState} from 'react';
+import useDbController from '../library/hooks/useDbController';
 
 const CreateAccount = ({navigation}) => {
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const {visible, loading, message, errors, confirmed, createAccount} =
+    useDbController({
+      email,
+      userName,
+      password,
+      navigation,
+      setUserName,
+      setPassword,
+      setEmail,
+    });
+
   return (
     <Background>
       <StatusBar backgroundColor={'transparent'} translucent />
@@ -29,9 +45,25 @@ const CreateAccount = ({navigation}) => {
           <Text style={styleCreateAccount.text}>Create Account</Text>
         </View>
         <View style={styleCreateAccount.inputContainer}>
-          <InputContainer icon={user} placeholder="Full Name" />
-          <InputContainer icon={mail} placeholder="Email" />
-          <InputContainer icon={pass} placeholder="Password" secureTextEntry />
+          <InputContainer
+            icon={user}
+            placeholder="Full Name"
+            value={userName}
+            onChangeText={setUserName}
+          />
+          <InputContainer
+            icon={mail}
+            placeholder="Email"
+            value={email}
+            onChangeText={setEmail}
+          />
+          <InputContainer
+            icon={pass}
+            placeholder="Password"
+            value={password}
+            secureTextEntry
+            onChangeText={setPassword}
+          />
         </View>
         <View>
           <PrimaryButton
@@ -39,13 +71,24 @@ const CreateAccount = ({navigation}) => {
             text="CREATE ACCOUNT"
             styleText={stylePrimaryButton.text}
             styleButton={[stylePrimaryButton.button, styleCreateAccount.button]}
-            onPress={() => navigation.jumpTo('SignIn')}
+            onPress={() => createAccount(email, password, userName, navigation)}
           />
         </View>
       </View>
       <View style={styleCreateAccount.viewDown}>
-        <PrimaryButton text="SIGN IN" styleText={stylePrimaryButton.text} onPress={() => navigation.jumpTo('SignIn')} />
+        <PrimaryButton
+          text="SIGN IN"
+          styleText={stylePrimaryButton.text}
+          onPress={() => navigation.jumpTo('SignIn')}
+        />
       </View>
+      <ModalComponent
+        visible={visible}
+        msg={message}
+        isLoading={loading}
+        isError={errors}
+        confirmed={confirmed}
+      />
     </Background>
   );
 };

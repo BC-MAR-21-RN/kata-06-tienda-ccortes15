@@ -1,7 +1,6 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { DrawerContainer } from './src/navigators';
-import {} from 'react-native-reanimated'
+import {NavigationContainer} from '@react-navigation/native';
+import {DrawerContainer} from './src/navigators';
 
 const App = () => {
   return (

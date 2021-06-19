@@ -3,7 +3,7 @@ import {colors} from '../../constants/colors';
 
 export const style = StyleSheet.create({
   viewTop: {
-    minHeight: '80%',
+    flex: 4,
     paddingHorizontal: 30,
     paddingBottom: 30,
     backgroundColor: colors.white,

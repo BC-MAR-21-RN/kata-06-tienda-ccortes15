@@ -19,6 +19,8 @@ const phone = require('../../assets/icons/phone.png');
 const message = require('../../assets/icons/message-square.png');
 const logOut = require('../../assets/icons/log-out.png');
 const archive = require('../../assets/icons/archive.png');
+const loading = require('../../assets/icons/loader.png');
+const xOctagon = require('../../assets/icons/x-octagon.png');
 
 export {
   archive,
@@ -41,5 +43,7 @@ export {
   tag,
   phone,
   message,
-  logOut
+  logOut,
+  loading,
+  xOctagon,
 };

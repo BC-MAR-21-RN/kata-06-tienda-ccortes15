@@ -1,5 +1,5 @@
 import React from 'react';
-import {ImageBackground, View} from 'react-native';
+import {ImageBackground, KeyboardAvoidingView, Platform, View} from 'react-native';
 import {styleBackground} from '../library/styles';
 
 const Background = ({children}) => {
